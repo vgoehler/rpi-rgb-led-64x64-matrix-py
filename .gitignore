@@ -4,3 +4,6 @@
 *.so
 .envrc
 .direnv
+.idea/
+__pycache__/
+*.py[cod]
