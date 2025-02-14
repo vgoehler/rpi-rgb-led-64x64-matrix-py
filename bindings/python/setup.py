@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from setuptools import setup, Extension
+from setuptools import setup, Extension, find_packages
 from Cython.Build import cythonize
 
 core_ext = Extension(
@@ -31,5 +31,5 @@ setup(
     classifiers=['Development Status :: 3 - Alpha'],
     ext_package='rgbmatrix',
     ext_modules=cythonize([core_ext, graphics_ext]),
-    packages=['rgbmatrix']
+    packages=find_packages(include=['rgbmatrix'])
 )
