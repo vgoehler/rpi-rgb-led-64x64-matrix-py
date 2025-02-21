@@ -18,6 +18,16 @@ make build-python
 sudo make install-python 
 ```
 
+#### changes in the Build System
+
+As pip does not allow installing in the system anymore and my repo cython3 was ancient.
+I used this way:
+
+1. create a venv `` python -m venv .venv ``
+2. activate the venv `` source .venv/bin/activate ``
+3. install cython with pip  `` pip install cython ``
+4. `` make install-python CYTHON=$(which cython)``
+
 ### PyPy
 The cython binding to PyPy seems to be somewhat working but extremely slow (20x
 slower even than the regular Python binding, 160x slower than C++), so this is
